@@ -1,0 +1,11 @@
+framework module ElloMobileSDK_ios {
+  umbrella header "ElloMobileSDK_ios.h"
+
+  export *
+  module * { export * }
+}
+
+module ElloMobileSDK_ios.Swift {
+    header "ElloMobileSDK_ios-Swift.h"
+    requires objc
+}
