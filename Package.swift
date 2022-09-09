@@ -3,22 +3,26 @@
 
 import PackageDescription
 
+let version = "1.0.0"
+let moduleName = "ElloSDK_ios"
+let checksum = "7ad152af89d6c286aa202675010dea139f2534f670e830855c7df3b59294a9c0"
+
 let package = Package(
-    name: "ElloSDK-ios",
-    
+    name: moduleName,
     platforms: [
-        .macOS(.v10_15), .iOS(.v14)
+        .iOS(.v13) //, .macCatalyst(.v15), .macOS(.v10_15)
     ],
-    
     products: [
         .library(
-            name: "ElloSDK-ios",
-            targets: ["ElloMobileSDK-ios"]),
+            name: moduleName,
+            targets: [moduleName]
+        )
     ],
-    
     targets: [
-      .binaryTarget(
-        name: "ElloMobileSDK-ios",
-        path: "./Sources/ElloMobileSDK-ios.xcframework")
+        .binaryTarget(
+            name: moduleName,
+            url: "https://github.com/MehtabAhmad/ElloSDK-ios/releases/download/\(version)/\(moduleName).xcframework.zip",
+            checksum: checksum
+        )
     ]
 )
