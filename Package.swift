@@ -3,9 +3,9 @@
 
 import PackageDescription
 
-let version = "1.0.1"
+let version = "2.0.0"
 let moduleName = "ElloSDK_ios"
-let checksum = "65e51de05a6ded8cec3382f7a540db785329dea2840d59e76d3f0563204bf895"
+let checksum = "47935e3f10c4e2852c437d5539f55df7350b72a9f6478ac79ee79a8727fa57f8"
 
 let package = Package(
     name: moduleName,
